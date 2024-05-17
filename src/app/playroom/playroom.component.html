@@ -1,0 +1,6 @@
+<div *appStructural="'Hello World I am test data', value as v">
+    This content use structural directive :
+    <button (click)="isShow = !isShow">Toggle Content</button>
+    <div *ngIf="isShow">{{v | makeUppercase}}</div>
+</div>
+<h2 appAttribute>Catch me if you can</h2>

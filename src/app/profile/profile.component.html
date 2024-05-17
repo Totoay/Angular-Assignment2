@@ -1,0 +1,39 @@
+<div>
+    <h1>Your Profile</h1>
+    <form [formGroup]="profile" (submit)="onSubmit()">
+
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" placeholder="Your First Name" formControlName="firstname">
+        <div *ngIf="this.profile.controls['firstname'].errors?['required']:''">* First name is required</div>
+        <br>
+
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" placeholder="Your Last Name" formControlName="lastname">
+        <div *ngIf="this.profile.controls['lastname'].errors?['required']:''">* Last name is required</div>
+        <br>
+
+        <label for="birthDate">Birth Date</label>
+        <input type="date" id="birthDate" formControlName="birthDate">
+        <div *ngIf="this.profile.controls['birthDate'].errors?['required']:''">* Birth date is required</div>
+        <br>
+
+        <label for="age">Age</label>
+        <input type="number" placeholder="Your Age" id="age" formControlName="age">
+        <div *ngIf="this.profile.controls['age'].errors?['required']:''">* Age is required</div>
+        <div *ngIf="this.profile.controls['age'].errors?['min']:''">* Age must be at least 1</div>
+        <div *ngIf="this.profile.controls['age'].errors?['max']:''">* Age cannot be more than 100</div>
+        <br>
+
+        <label for="gender">Gender</label>
+        <select id="gender" formControlName="gender">
+            <option value=""></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+        <div *ngIf="this.profile.controls['gender'].errors?['required']:''"> * Gender is required</div>
+        <br>
+        
+        <button type="submit" [disabled]="this.profile.invalid">Submit</button>
+    </form>
+</div>

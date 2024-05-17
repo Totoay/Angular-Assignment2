@@ -1,0 +1,62 @@
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1.5rem;
+    border: 1px solid #bbb9b9;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px gray;
+}
+  
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+  
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+  
+input, select {
+    width: calc(100% - 10px);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+  
+button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button:disabled {
+    background-color: #c3c7ca;
+    cursor: not-allowed;
+}
+  
+  button:not(:disabled):hover {
+    background-color: #0056b3;
+}
+  
+div {
+    margin-bottom: 1rem;
+}
+  
+div div {
+    color: rgb(155, 22, 22);
+    font-size: 0.875rem;
+}
+  
